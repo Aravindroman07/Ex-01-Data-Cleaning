@@ -20,56 +20,31 @@ Save the Clean data to the file
 
 # CODE
 
-# dataset
-```
-
 import pandas as pd
 import numpy as np
-data=pd.read_csv("/content/Data_set.csv")
-data.head()
-data.info()
-data.isnull()
-data.isnull().sum()
-data['show_name']=data['show_name'].fillna(data['aired_on'].mode()[0])
-data['aired_on']=data['show_name'].fillna(data['aired_on'].mode()[0])
-data['original_network']=data['original_network'].fillna(data['aired_on'].mode()[0])
-data.head()
-data['rating']=data['rating'].fillna(data['rating'].mean())
-data['current_overall_rank']=data['current_overall_rank'].fillna(data['current_overall_rank'].mean())
-data.head()
-data['watchers']=data['watchers'].fillna(data['watchers'].mean())
-data.head()
-data.info()
-data.isnull().sum()
-```
-
-# Loan
-```
-
-import pandas as pd
-import numpy as np
-import seaborn as snb
-df = pd.read_csv("/content/Loan_data.csv")
-df.head(5)
+import seaborn as sns
+df = pd.read_csv("Loan_data.csv")
+print(df)
 df.info()
 df.isnull().sum()
-df['Gender'] = df["Gender"].fillna(df['Gender'].mode()[0])
-df['Dependents'] = df["Dependents"].fillna(df['Dependents'].mode()[0])
-df['Self_Employed'] = df["Self_Employed"].fillna(df['Self_Employed'].mode()[0])
-df['Credit_History'] = df["Credit_History"].fillna(df['Credit_History'].mode()[0])
-df.head()
-df['Loan_Amount_Term'] = df["Loan_Amount_Term"].fillna(df['Loan_Amount_Term'].mean())
-df.head()
+df['Gender']=df['Gender'].fillna(df['Gender'].mode()[0])
+df['Dependents']=df['Dependents'].fillna(df['Dependents'].mode()[0])
+df['Self_Employed']=df['Self_Employed'].fillna(df['Self_Employed'].mode()[0])
 df['LoanAmount']=df['LoanAmount'].fillna(df['LoanAmount'].median())
-df.head()
-df.info()
+df['Loan_Amount_Term']=df['Loan_Amount_Term'].fillna(df['Loan_Amount_Term'].median())
+df['Credit_History']=df['Credit_History'].fillna(df['Credit_History'].median())
 df.isnull().sum()
 
-```
+# OUTPUT
 
-# OUPUT
+![image](https://user-images.githubusercontent.com/95520655/226825010-2760053f-4ce1-4368-bf5a-59ff21f6e125.png)
+![image](https://user-images.githubusercontent.com/95520655/226825166-8259f247-e76f-416b-969e-045837977d4a.png)
+![image](https://user-images.githubusercontent.com/95520655/226825262-457a28d0-8236-4aa4-8670-d85f31a07628.png)
+![image](https://user-images.githubusercontent.com/95520655/226825473-6b627ff3-912a-43c4-bcf3-3438c97cb802.png)
+![image](https://user-images.githubusercontent.com/95520655/226825537-f19fad1a-d677-4842-b866-5c32338106f2.png)
+![image](https://user-images.githubusercontent.com/95520655/226825623-9dc4677a-3554-4d63-80b3-7057864bf97c.png)
 
 
-
-# Result 
-Thus ,the given data is read,cleansed and the cleaned data is saved into file.
+# RESULT
+Thus the given dataset is read ,cleansing and the cleaned data is saved into the
+file
