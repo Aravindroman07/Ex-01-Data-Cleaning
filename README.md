@@ -69,26 +69,7 @@ df.isnull().sum()
 
 # OUPUT
 
-# Dataset
-![Data Cleaning](./images/img.jpeg)
 
-![Data Cleaning](./images/img1.jpeg)
-
-![Data Cleaning](./images/img2.jpeg)
-
-![Data Cleaning](./images/img3.jpeg)
-
-![Data Cleaning](./images/img4.jpeg)
-
-# Loan
-
-![Data Cleaning](./images/img7.jpeg)
-
-![Data Cleaning](./images/img9.jpeg)
-
-![Data Cleaning](./images/img10.jpeg)
-
-![Data Cleaning](./images/img11.jpeg)
 
 # Result 
 Thus ,the given data is read,cleansed and the cleaned data is saved into file.
